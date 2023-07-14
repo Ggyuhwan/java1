@@ -1,0 +1,17 @@
+package ch01_start;
+
+public class Hellow {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hello world");
+		
+		
+		//라인 복사 ctrl + alt + 방향키
+		System.out.println("Hello world");
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+package ch04_Operator;
+
+import java.util.Scanner;
+
+public class Operator01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("이름을 입력해주세요");
+		String aString = scanner.nextLine();
+		System.out.println("국어 점수를 입력해주세요");
+		String bString = scanner.nextLine();
+		System.out.println("영어 점수를 입력해주세요");
+		String cString = scanner.nextLine();
+		System.out.println("수학 점수를 입력해주세요");
+		String dString = scanner.nextLine();
+		
+		System.out.println("이름\t:"+aString);
+		System.out.println("국어\t:"+aString);
+		System.out.println("영어\t:"+aString);
+		System.out.println("수학\t:"+aString);
+
+	}
+
+}

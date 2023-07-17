@@ -15,11 +15,11 @@ public class result01 {
 		long phone = 45163549L;
 		String email= "rbghks4677@naver.com" ;
 		
-		System.out.println("이름\t: " + name);
-		System.out.println("나이\t: " + age);
-		System.out.println("키\t: " + height);
-		System.out.println("번호\t: " + phone);
-		System.out.println("이메일\t: " + email);
+		System.out.println("이름: " + name);
+		System.out.println("나이: " + age);
+		System.out.println("키: " + height);
+		System.out.println("번호: " + phone);
+		System.out.println("이메일: " + email);
 		
 		// q.02
 		String  enigms ="너오구늘리뭐너먹구지리";

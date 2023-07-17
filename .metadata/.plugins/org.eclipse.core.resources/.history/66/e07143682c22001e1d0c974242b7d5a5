@@ -1,0 +1,22 @@
+package practice.submit01;
+
+import java.util.Scanner;
+
+public class hahaha {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("x 값 입력");
+		String strX = scanner.nextLine();
+		int x = Integer.parseInt(strX);
+		
+		System.out.println("y 값 입력");
+		String strY = scanner.nextLine();
+		int y = Integer.parseInt(strY);
+		
+		
+		
+	}
+
+}

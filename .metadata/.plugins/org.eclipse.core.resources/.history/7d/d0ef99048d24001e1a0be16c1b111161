@@ -1,0 +1,29 @@
+package ch04_Operator;
+
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class _01_If {
+
+	public static void main(String[] args) {
+		
+		
+		int sum = 0;
+		for (int i = 1 ; i <= 10 ; i++) {
+			sum += i;
+			System.out.println("현재까지 총합은" +sum+"입니다");
+			
+		}
+		System.out.println(sum);
+		
+		for (int i = 0 ; i < 5 ; i+=2) {
+			System.out.println("드루와"+i);
+		}
+
+		for (int i = 5; i > 0; i-- ) {
+			System.out.print(i);
+		}
+		
+	}
+
+}

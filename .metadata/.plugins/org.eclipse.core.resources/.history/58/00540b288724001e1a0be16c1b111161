@@ -1,0 +1,22 @@
+package ch04_Operator;
+
+import java.util.Scanner;
+
+public class _01_If {
+
+	public static void main(String[] args) {
+		
+		boolean han = true;
+		boolean man = true;
+		
+		if(han) {
+			System.out.println("한라봉+1");
+		}else if (man) {
+			System.out.println("망고+1");		
+		}else {
+			System.out.println("아아+1");
+		}
+		System.out.println("주문완료1");
+	}
+
+}

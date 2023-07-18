@@ -1,0 +1,30 @@
+package ch04_Operator;
+
+import java.util.Scanner;
+
+public class _01_If {
+
+	public static void main(String[] args) {
+		
+		//조건문 if else
+		int hour = 15;
+		if (hour < 14) {
+			System.out.println("아아+1");
+		}
+		else {
+			System.out.println("아아(디카페인)+1");
+		}
+		System.out.println("주문완료1");
+		
+		hour = 15;
+		boolean morning =true;
+		if (hour >=14 || morning == true) {
+			System.out.println("아아(디카페인)+1");
+		}
+		else {
+			System.out.println("아아+1");
+		}
+		System.out.println("주문완료2");
+	}
+
+}

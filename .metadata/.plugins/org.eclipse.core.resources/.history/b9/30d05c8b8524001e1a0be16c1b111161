@@ -1,0 +1,38 @@
+package ch04_Operator;
+
+import java.util.Scanner;
+
+public class _01_If {
+
+	public static void main(String[] args) {
+		//조건문 If
+		int hour = 10; // 오전 10시
+		// if 문 내에서 하나의 문장을 실행할 떄는 {} 생략가능
+		// if 문 내에서 2개 이상의 문장을 실행할 떄는 {} 생략불가
+		if(hour < 14) {
+			System.out.println("아이스아메리카노 +1");
+			System.out.println("샷추가");
+		}
+		System.out.println("커피주문완료1");
+		
+		//오후 2시 이전, 모닝 커피를 마시지 않은경우
+		
+		hour =10;
+		boolean moning = false; // 모닝커피
+		if (hour < 14 && moning == false) {
+			System.out.println("아아 +1");
+		}
+		System.out.println("주문완료2");
+		
+		//오후 두시이후이거나 모닝커피 마신경우 디카페인
+		hour = 15;
+		moning = false;
+		if (hour >= 14 || moning == true) {
+			System.out.println("아아(디카페인)+1");
+			
+		}
+		System.out.println("주문완료3");
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package ch05_control;
+
+public class LoopFor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

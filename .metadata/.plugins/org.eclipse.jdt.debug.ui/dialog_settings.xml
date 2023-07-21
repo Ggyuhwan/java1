@@ -2,4 +2,6 @@
 <section name="Workbench">
 	<section name="conditionHistory">
 	</section>
+	<section name="expressionHistory">
+	</section>
 </section>

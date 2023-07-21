@@ -1,0 +1,48 @@
+package practice.submit01;
+
+import java.util.Iterator;
+import java.util.Random;
+import java.util.Scanner;
+
+public class q05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		Q. 01
+//		1~50 사이의 랜덤한 수를 5번 안에 맞춰야하는 업다운 게임을 만들어보세요.
+//		실행 시 1~50 사이의 랜덤한 수가 생성되며, 사용자가 입력한 숫자에 대해 업, 다운을
+//		알려준다.
+//		5번의 기회 동안 사용자가 정답을 맞추지 못한다면 "실패하였습니다" 문구 출력 후
+//		프로그램이 종료, 사용자가 정답을 맞춘다면 "정답입니다" 문구 출력 후 프로그램이
+//		종료된다.
+//		실행 결과 예시
+/*수도
+ * 1. 1~50 까지의 랜덤함수 호출
+ * 2. 사용자 입력 숫자 받기
+ * 3. 반복문 5번 돌리기 
+ * 4. 5번안에 맞추면 정답 아니면 실패
+ * 5. if문으로 작성*/
+		
+		Random random = new Random();
+		int ran = random.nextInt(2);
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("업다운 게임!! 1~50까지 입력해보세요");
+		int a = scanner.nextInt();
+		int i = 1;
+
+		while(true) {
+			int ran1 = random.nextInt(1);
+			System.out.println(ran1);
+			if (ran1==a) {
+				System.out.println("정답입니다");
+				
+			}
+			if (ran1 > a) {
+			System.out.println("보다 큽니다");
+			
+		} 
+		break;
+	}
+		
+	}
+}

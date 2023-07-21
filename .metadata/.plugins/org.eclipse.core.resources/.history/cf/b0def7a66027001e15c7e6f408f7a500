@@ -1,0 +1,29 @@
+package practice.submit01;
+
+import java.util.Iterator;
+
+public class q0404 {
+
+	public static void main(String[] args) {
+		
+		
+		//1. 5번반복
+		//2. 별1, 3, 5, 7, 9
+		//3. 공백4, 3, 2, 1, 0
+		String star = "*";
+		String blank = "";
+		for(int i=0; i < 5; i++) {
+			if(i > 0) {
+				star += "**";
+			}
+			for(int j =1; j<5-i; j++) {
+				blank +=" ";
+			}System.out.println(star);
+		}
+		
+		
+		
+		
+	}
+
+}

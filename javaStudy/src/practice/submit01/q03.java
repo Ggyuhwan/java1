@@ -54,11 +54,30 @@ public class q03 {
 //		위의 문자열 변수 findWally 중에 월리가 몇개 들어있는지 콘솔에 출력해주세요.
 //
 //		결과: 5
-		//String findWally = "윌리울리일리울리울리일리월리일리윌리월리울리일리일리월리일리윌리일리윌리일리월리월리윌리울리윌리울리일리울리울리윌리일리";
-		String findWally = "월리왈리월리울리";
-		System.out.println(findWally.substring(3));
-		System.out.println(findWally.indexOf("월리"));
+		String findWally = "윌리울리일리울리울리일리월리일리윌리월리울리일리일리월리일리윌리일리윌리일리월리월리윌리울리윌리울리일리울리울리윌리일리";
+		int all = findWally.length();
+		int after = findWally.replaceAll("월리", "").length();
+		System.out.println((all - after)/2);
 		
+		int count = 0;
+		for(int i=0; i<findWally.length()-1; i++) {
+			String subwally = findWally.substring(i,i+2);
+			if(subwally.equals("월리")) {
+				count +=1;
+			}
+		}System.out.println("월리는?:"+count);
+		
+		
+		String star="*****";
+		
+		for(int i = 5; i>0; i-- ) {
+			String substar = star.substring(0,i);
+			System.out.println(substar);
+		}
+		
+		for(int i =0; i < 5; i++) {
+			System.out.println(star.substring(i));
+		}
 		
 		for (int i = 1; i <= 5; i++) {
 			for (int j = 5; j >= i; j--) {

@@ -1,0 +1,78 @@
+package ch05_control;
+
+import java.util.Scanner;
+
+
+
+public class LoopWhile {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int i=1;
+		// 조건이 true이면 반복 (무한루프 조심)
+		while(i <= 10) {
+			System.out.println(i);
+			i++;
+		}
+		int j=1;
+		
+		
+		while(true) {
+			System.out.println(j);
+			j++;
+			if(j==10) {
+				break;
+			}
+		}
+		
+		boolean flag = true;
+		while (flag) {
+			j++;
+			System.out.println(j);
+			if(j==20) {
+				flag=false;
+			}
+		}
+		
+		Scanner scanner = new Scanner(System.in);
+		boolean isRun= true;
+		while(isRun) {
+			System.out.println("이름입력(종료 q or Q");
+			System.out.println(">>>");
+			String input = scanner.nextLine();
+			if(input.equals("q") || input.equals("Q")) {
+				isRun = false;
+				
+			}else {
+				System.out.println(input+"님 환영합니다^^");
+			}
+			System.out.println("=============================");
+		}
+		
+		// do-while 문
+		// 최소 한번은 실행해야할때
+		isRun = false;
+		do {
+			System.out.println("hi");
+		}while(isRun);
+		
+		// while 구구단 출력 
+				// 증가값을 만들어줘야함!
+		
+		int a = 1;
+		int b = 1;
+		int a1 = a++; 
+		
+		while( a1 <=9) {
+		System.out.println(a1*b);
+		a1++;
+	}	
+	}
+}	
+		
+		
+		
+		
+	
+

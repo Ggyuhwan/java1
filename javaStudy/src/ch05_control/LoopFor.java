@@ -52,26 +52,26 @@ public class LoopFor {
 			
 		}System.out.println(sum4);
 		//for문을 이용해서 2단을 출력해봐
-		int sum6 =0;
-		int sum5 = 2;
-		for(int i = 1; i <=9; i++) {
-			 
-			System.out.println(sum5 * i);
-		}
-		System.out.println("===========입력받은 구구단을 출력===============");
-		Scanner scanner = new Scanner(System.in);
-		int a = scanner.nextInt();
-		
-		for(int i = 0; i <=9; i ++) {
-			int b = a*i;
-			System.out.printf(a+"x"+i+"="+b+"\n");
-		}scanner.close();
-		
-		String star = "";
-		for(int i=1; i<6; i++) {
-			star += "가";
-			System.out.println(star);
-		}
+//		int sum6 =0;
+//		int sum5 = 2;
+//		for(int i = 1; i <=9; i++) {
+//			 
+//			System.out.println(sum5 * i);
+//		}
+//		System.out.println("===========입력받은 구구단을 출력===============");
+//		Scanner scanner = new Scanner(System.in);
+//		int a = scanner.nextInt();
+//		
+//		for(int i = 0; i <=9; i ++) {
+//			int b = a*i;
+//			System.out.printf(a+"x"+i+"="+b+"\n");
+//		}scanner.close();
+//		
+//		String star = "";
+//		for(int i=1; i<6; i++) {
+//			star += "가";
+//			System.out.println(star);
+//		}
 		// 10부터 1까지 출력
 		for(int i =10; i >=1; i--) {
 			System.out.println(i);
@@ -110,6 +110,37 @@ public class LoopFor {
 		for(int i = 0; i < strNum.length(); i++) {
 		result += Integer.parseInt(strNum.substring(i,i+1));		
 	}	System.out.println("각 자리를 더한 값:"+result);
+	
+	/*
+	 * break 문
+	 * 반복문 내에서 break 문이 실행되면 해당 반복문을 즉시 종료!
+	 * */
+	//1  ~ n 까지 더한 값이 100 이상이 되는 지점의 n을 구하시오!
+	
+	int summ = 0;
+	for(int i=1 ; i < 9999; i++) {
+		summ+=i;
+		if(summ>=100) {
+			System.out.println("100 이상이되는 n: " +i);
+			break;
+		}
+	}
+	
+// 구구단 출력 2~9단
+	int gu = 1;
+	for (int i=2; i <=9; i++) {
+		
+		if((i==5) || (i==8)){
+			//반복문에서 continue를 만나면 해당 반복문의 아래 로직은 
+			//건너뛰고 다음 반복으로 넘어감
+			continue;
+		}
+		System.out.println(i+"단");
+		for(int j=1; j<=9; j++) {
+			System.out.printf("%d x %d = %d \n",i , j, (i*j));
+		}
+	}
+	
 		
 	}
 }

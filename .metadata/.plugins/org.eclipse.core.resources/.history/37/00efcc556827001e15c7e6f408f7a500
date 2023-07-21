@@ -1,0 +1,29 @@
+package ch06_Method;
+
+public class MethodMain {
+
+	public static void main(String[] args) {
+		// 메소드 클래스에 종속된 함수.
+		// java 는 모두 class에 작성되기 때문에 사용되는 함수를 메소드라고 부름.
+		// function 은 클래스에 독립적인 함수
+		// 1 ~ 100까지 더 하면 결과는?
+		// 1 ~ 50까지 더 하면 결과는?
+		// 1 ~ 25까지 더 하면 결과는?
+		// 30 ~ 60 까지 더하면?
+		int sum = 0;
+		for(int i=1; i <=100;i++){
+			sum += i;
+		}
+		System.out.println(sum);
+		
+	}//메소드 생성
+	//[접근제어자 static] 리턴타입 메소드명(파라미터){
+	public static void printSum(int from, int to) {
+		int sum = 0;
+		for(int i = from; i <= to; i++) {
+			sum +=i;
+		}
+		System.out.println((from+" 부터" + to + "까지 더한결과는" +sum));
+	}
+
+}

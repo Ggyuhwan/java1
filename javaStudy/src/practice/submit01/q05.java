@@ -66,9 +66,12 @@ public class q05 {
 		 * 3. 입력받은수 랑 A,B를 비교해서 가까운수 구하기
 		 * 4. 가까운수로 엘베 이동시키기
 		 * 5. 프로그램 종료 시키기*/
-		int a1 = scanner.nextInt();
+		int a1 = 4;
 		int A = 10;
 		int B = 1;
-		System.out.println(a1-A);
+		
+		System.out.println(a1-B);
+		int num1 = Math.abs(a1-A);
+		int num2 = Math.abs(a1-B);
 	}
 }

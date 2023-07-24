@@ -1,32 +1,91 @@
 package practice.submit01;
 
+import java.util.Scanner;
+
 public class q050505 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	
-//		엘리베이터가 두 대 있는 빌딩에서 엘리베이터 버튼을 눌렀을 때, 한 대의 엘리베이터가
-//		이동하는
-//		프로그램을 구현해 봅시다.
-//		1. 사용자의 현재 위치를 입력하면 사용자의 위치와 가까운 엘리베이터가 이동한다.
-//		2. 사용자의 위치와 두 엘리베이터의 위치 차이가 동일하다면 위 층 엘리베이터가 내려온다.
-//		3. 사용자의 위치로 엘리베이터의 위치를 바꿔준다.
-//		4. 엘리베이터 프로그램을 종료하려면 q, Q, exit, EXIT, Exit 중 하나를 입력한다.
-//		@. 사용자가 엘리베이터에 탑승하고 층을 입력하면 탑승 중인 엘리베이터가 해당 층으로
-//		이동하도록 만드세요.
-		/*수도
-		 * 1. 엘베 위치 입력
-		 * 2. 현재위치를 입력받는다
-		 * 3. 입력받은수 랑 A,B를 비교해서 가까운수 구하기
-		 * 4. 가까운수로 엘베 이동시키기
-		 * 5. 프로그램 종료 시키기*/
-		int a1 = 4;
-		int A = 10;
-		int B = 1;
 		
-		System.out.println(a1-B);
-		int num1 = Math.abs(a1-A);
-		int num2 = Math.abs(a1-B);
+//		int ran = (int)(Math.random()*50+1);
+//		Scanner scanner = new Scanner(System.in);
+//		int chance = 5;
+//		while (true) {
+//			System.out.println("숫자입력");
+//			int userPick = Integer.parseInt(scanner.nextLine());
+//			
+//			
+//		}
+//		scanner.close();
+		for(int i = 4; i >=0; i--) {
+			System.out.println("기회가"+ i +" 번 남음");
+			
+		}
+		int elevA = 10;
+		int elevB = 4;
+		Scanner scanner = new Scanner(System.in);
+		
+		final int ACTIVE_ELEVATOR_A =1;
+		final int ACTIVE_ELEVATOR_B =2;
+		int active = 0;
+		while (true) {
+			System.out.println("\n ==============엘베 ===================\n");
+			System.out.println("승강기 A위치"+ elevA);
+			System.out.println("승강기  B위치"+ elevB);
+			System.out.println("몇층에 계시나요? [ 종료하려면 q exit 입력]:");
+			
+			String inputText = scanner.nextLine();
+			if(inputText.equalsIgnoreCase("q") ||
+					inputText.equalsIgnoreCase("exit")){
+				System.out.println("종료");
+				break;
+			}
+			//층ㅅ구 입력
+			int custFloor = Integer.parseInt(inputText);
+			System.out.println(custFloor + "층에서 호출");
+			int diffFloorA = (custFloor>elevA)? (custFloor - elevA)
+					:(elevA -elevB);
+			int diffFloorB = Math.abs(custFloor - elevB);
+			//위치에 따른 엘베 이동
+			//에이 승강기가 멀때
+			if(diffFloorA > diffFloorB) {
+			
+				System.out.println("승강기 b가"+custFloor+"층으로 이동");
+				elevB =custFloor;
+				active = ACTIVE_ELEVATOR_B;
+				//비 승강기가 더멀때	
+			}else if(diffFloorA > diffFloorB) {
+				System.out.println("승강기 a가"+custFloor+"층으로 이동");
+				elevA =custFloor;
+				active = ACTIVE_ELEVATOR_A;
+			}
+			//같을때
+			else {
+				if(elevA > elevB) {
+					System.out.println("승강기 a가"+custFloor+"층으로 이동");
+					elevA =custFloor;
+					active = ACTIVE_ELEVATOR_A;
+		}
+				else {
+			System.out.println("승강기 b가"+custFloor+"층으로 이동");
+			elevB =custFloor;
+			active = ACTIVE_ELEVATOR_B;
+		}
+			}
+		System.out.println("어느 층으로 이동?");
+		inputText = scanner.nextLine();
+		int goToFloor = Integer.parseInt(inputText);
+		if(active == ACTIVE_ELEVATOR_A) {
+			System.out.println("승강기 a가"+ goToFloor+"층으로 이동");
+			elevA = goToFloor;
+		}else {
+			System.out.println("승강기 b가"+ goToFloor+"층으로 이동");
+			elevB = goToFloor;
+		}
+		
+		break;
 	}
-
+	}
+			
+	
 }

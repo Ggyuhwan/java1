@@ -3,12 +3,14 @@ package ch08_collection;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
 
-public class PlayList {
+public class PlayMap {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ArrayList<String> playList = new ArrayList<String>(Arrays.asList("Super Shy:NewJeans",
 				"Seven (feat. Latto):Clean Ver.:정국", "퀸카 (Queencard):(여자)아이들", "ETAN:NewJeans", "헤어지자 말해요:박재정",
 				"I AM:IVE (아이브)", "이브, 프시케 그리고 푸른 수염의 아내:LE SSERAFIM (르세라핌)", "Spicy:aespa",
@@ -36,54 +38,59 @@ public class PlayList {
 				"사실말야내가말야그게그러니까말이야:케이시 (Kassy)", "Summer (Feat. BE’O (비오)):Paul Blanco", "Nxde:(여자)아이들",
 				"그중에 그대를 만나:김호중", "Monologue:테이", "다정히 내 이름을 부르면:전건호, 경서", "Thirsty:aespa",
 				"잘 지내자, 우리 (여름날 우리 X 로이킴):로이킴", "사랑의 바보:제이세라", "찬란한 하루:멜로망스", "KNOCK:이채연"));
-
-		// "노래:가수"
-		System.out.println(playList.size());
-
-		System.out.println("\n===============정렬");
-		// 오름차순 ABC > abc > 가나다 순으로 정렬
-		Collections.sort(playList);
-		System.out.println(playList);
-		for (int i = 0; i < playList.size(); i++) {
-			System.out.println(playList.get(i));
-		}
-		System.out.println("================== 내림차순");
-		// 내림차순
-		Collections.sort(playList, Comparator.reverseOrder());
-		for (String str : playList) {
-			System.out.println(str);
-		}
-		System.out.println("=============제목/가수 검색============");
-		ArrayList<String> searchList = searchSong("가수", "임영웅", playList);
-		System.out.println("검색 데이터 사이즈:" + searchList.size());
-		for (String str : searchList) {
-			System.out.println(str);
-		}
-
+		
+			HashMap<String, ArrayList<String>> singerMap = new HashMap<>();
+			System.out.println(makeSongList("임영웅", playList));
+			singerMap.put("임영웅", makeSongList("임영웅", playList));
+			Set<String> keySet = singerMap.keySet();
+			for(String key:keySet) {
+				System.out.println(key + ":" + singerMap.get(key));
+			}
+			//전체 가수들의 노래 리스트를 만들려면?
+			// 1.가수목록생성 (유니크하게)
+			HashSet<String> singer = new HashSet<String>(); //HashSet 만들기
+			for(int i = 0 ; i< playList.size(); i++) {
+				String [] temp = playList.get(i).split(":");
+				singer.add(temp[1]);
+			}
+			System.out.println(singer.size()+":"+singer);
+			// 2.목록을 순회하며 makeSongList 메서드를 사용하여 map에 담기
+			for(String sing : singer) {
+				singerMap.put(sing, makeSongList(sing, playList));
+			}
+//			System.out.println(singerMap);
+			//Set<String> keySet = singerMap.keySet();
+			for(String key:keySet) {
+				System.out.println(key + ":" + singerMap.get(key));
+			}
+			System.out.println("=======================");
+			// 1. 가수 리스트 출력 (가수 이름 정렬하여)
+			// 2. 가수 이름 입력받기 (q 누를때까지)
+			// 3. 입력받은 가수만 노래리스트를 출력(Map형태로 담아서)
+			ArrayList<String> sing1 = new ArrayList<String>();
+			for(String key:keySet) {
+				sing1.add(key);
+			}
+			Collections.sort(sing1);
+			System.out.println(sing1);
+			Scanner scanner = new Scanner(System.in);
+			
+			String sing2 = "정국";
+			
+			System.out.println(sing2);
+			
+			
 	}
-
-	// input :가수or노래명, 키워드 ,리스트
-	// output :리스트
-	public static ArrayList<String> searchSong(String option, String keyword, ArrayList<String> arr) {
-		ArrayList<String> result = new ArrayList<String>();
-
-		for (int i = 0; i < arr.size(); i++) {
-			// :을 기준으로
-			String[] temp = arr.get(i).split(":");
-			// temp[0] 제목, temp[1]가수
-			// 영문 대소문자 상관없이, 포함되어 있다면 검색되도록
-			if (option.equals("제목")) {
-				if (temp[0].contains(keyword)) {
-					
-					result.add(arr.get(i));
-				}
-			} else if (option.equals("가수")) {
-				if (temp[1].contains(keyword)) {
-					result.add(arr.get(i));
-				}
+	// input 가수이름 , 전체 리스트
+	// output 가수 플레이리스트 
+	public static ArrayList<String> makeSongList(String name, ArrayList<String> arr) {
+		ArrayList<String> result = new ArrayList<>();
+		for(int i = 0 ; i< arr.size(); i++) {
+			String [] temp = arr.get(i).split(":");
+			if(name.equals(temp[1])) {
+				result.add(temp[0]);
 			}
 		}
-
 		return result;
 	}
 

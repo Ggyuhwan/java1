@@ -1,6 +1,7 @@
 package ch08_collection;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class q07 {
@@ -14,9 +15,15 @@ public class q07 {
 		//1.Set 활용
 		//2.로또번호 생성 메소드 만들기
 		
+	
+	ArrayList<Integer> intLotto = null;
+	String [] numArr = {};
+	intLotto = makeLotoo(numArr);
+	System.out.println(intLotto.toString());
 		
-		ArrayList<Integer> weekLotto = null ;
-		weekLotto = ran();
+		
+		
+		
 		
 		
 		
@@ -25,15 +32,33 @@ public class q07 {
 		
 	
 	}
-	public static ArrayList<Integer> ran() {
-	ArrayList<Integer> intList = new ArrayList<Integer>();
-	Random random = new Random();
+	public static ArrayList<Integer> makeLotoo(String [] arr) {
+		Random random = new Random();
+		ArrayList<Integer> intLotto = new ArrayList<Integer>();
+		//랜덤한 값을 넣어준다.
+		//스트링 리스트를 정수타입으로 변환해서 넣어준다
+		
+		
+		
+		for(String s:arr) {
+			intLotto.add(Integer.parseInt(s));
+		}
+		while (intLotto.size()!=6) {
+			intLotto.add(random.nextInt(1, 45));
+			
+			for(int i =0; i <intLotto.size(); i++) {
+				for(int j =0; j < intLotto.size();j++) {
+					if (i==j) {
+						
+					}
+				}
+			}
+			
+		}
+		Collections.sort(intLotto);
+	return intLotto;
 	
-	
-	for(int i = 0; i <6; i++) {
-		intList.add = (random.nextInt(1,45));
-		System.out.println(intList);
 	}
-	}
+
 
 }

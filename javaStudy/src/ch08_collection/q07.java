@@ -2,6 +2,7 @@ package ch08_collection;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.Random;
 
 public class q07 {
@@ -21,15 +22,9 @@ public class q07 {
 	intLotto = makeLotoo(numArr);
 	System.out.println(intLotto.toString());
 		
-		
-		
-		
-		
-		
-		
-		
+	System.out.println(shuffleLotto());
+	System.out.println(setLotto());
 	
-		
 	
 	}
 	public static ArrayList<Integer> makeLotoo(String [] arr) {
@@ -58,6 +53,34 @@ public class q07 {
 		Collections.sort(intLotto);
 	return intLotto;
 	
+	}
+	public static ArrayList<Integer> shuffleLotto() {
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		int maxNum = 45;
+		for(int i = 1; i <=maxNum; i++) {
+			numbers.add(i);
+		}
+		System.out.println(numbers);
+		Collections.shuffle(numbers);
+		System.out.println("shuffle"+ numbers);
+		ArrayList<Integer> result = new ArrayList<Integer>(numbers.subList(0, 6));
+		
+		return result;
+		
+		
+	}
+	public static ArrayList<Integer> setLotto(){
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		HashSet<Integer> lottoSet = new HashSet<Integer>();
+		while (lottoSet.size()<6) {
+			int num = (int) (Math.random()*45+1);
+			lottoSet.add(num);
+		}
+		for(Integer val : lottoSet) {
+			numbers.add(val);
+		}
+		Collections.sort(numbers);
+		return numbers;
 	}
 
 

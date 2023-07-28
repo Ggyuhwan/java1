@@ -1,27 +1,31 @@
 package 연습용;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class 연습연습 {
+	 public static void main(String[] args) {
+	   
+		String my_string = "Program29b8UYP";
+	    String	overwrite_string = "merS123";
+	    int s = 	7;
+	    
+	    int len1 = overwrite_string.length();
+	    int len2 = my_string.length();
+	    String sub01 = my_string.substring(0, s);
+        String sub02 = my_string.substring((s+len1), len2);
+        String answer = "";
+	    
+ answer += sub01 + overwrite_string + sub02;
 
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		int[] numbers = new int[6];
-		boolean isrun = true;
-	String answer = "he  he";
-	String my_string = "abcde";
-	System.out.println(my_string.charAt(1));
-String a= "";
-	for (int i=0; i<my_string.length();i++) {
-		
-	a = my_string.substring(i,i+1);
-	System.out.println(a);	
-	}
+      
+	   
+	   	 }
+	
+		}
+	    
 	
 	
 	
-	
-	}
-}
+	 
+
 

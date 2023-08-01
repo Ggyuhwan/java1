@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Byte"/>
-    <fullyQualifiedTypeName name="javax.swing.plaf.nimbus.NimbusLookAndFeel"/>
-    <fullyQualifiedTypeName name="java.net.Socket"/>
-    <fullyQualifiedTypeName name="javax.xml.namespace.QName"/>
-    <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicInternalFrameTitlePane.MoveAction"/>
-    <fullyQualifiedTypeName name="java.lang.StackOverflowError"/>
-    <fullyQualifiedTypeName name="java.security.DrbgParameters.NextBytes"/>
-    <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthGraphicsUtils"/>
-    <fullyQualifiedTypeName name="javax.sound.midi.Soundbank"/>
-    <fullyQualifiedTypeName name="javax.sql.rowset.spi.SyncResolver"/>
-    <fullyQualifiedTypeName name="boolean"/>
     <fullyQualifiedTypeName name="org.w3c.dom.NameList"/>
     <fullyQualifiedTypeName name="ch06_Method.method.sample"/>
     <fullyQualifiedTypeName name="javax.print.attribute.standard.Copies"/>
@@ -38,7 +27,6 @@
     <fullyQualifiedTypeName name="ch09_class.future.FutureStudent"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="ch09_class.typing.Dictionary"/>
-    <fullyQualifiedTypeName name="org.w3c.dom.ls.LSOutput"/>
     <fullyQualifiedTypeName name="practice.submit01.Account"/>
     <fullyQualifiedTypeName name="연습용.연습연습.Solution"/>
     <fullyQualifiedTypeName name="java.text.BreakIterator"/>
@@ -47,15 +35,29 @@
     <fullyQualifiedTypeName name="ch09_class.quiz.Movie"/>
     <fullyQualifiedTypeName name="ch09_class.quiz.MovieDB"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="ch09_class.homepage.MemberDB"/>
     <fullyQualifiedTypeName name="ch09_class.homepage.Member"/>
     <fullyQualifiedTypeName name="java.util.PrimitiveIterator"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="javax.swing.border.Border"/>
     <fullyQualifiedTypeName name="ch09_class.homepage.Board"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="ch09_class.homepage.BoardDB"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="ch10_extends_interface.simple.Parent"/>
+    <fullyQualifiedTypeName name="ch10_extends_interface.simple.child"/>
+    <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.Marine"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.HighTemplar"/>
+    <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.StarUnit"/>
+    <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.Zealot"/>
+    <fullyQualifiedTypeName name="ch10_extends_interface.ramen.Ramen"/>
+    <fullyQualifiedTypeName name="ch10_extends_interface.ramen.JinRamen"/>
+    <fullyQualifiedTypeName name="ch10_extends_interface.ramen.JjaPpagheti"/>
+    <fullyQualifiedTypeName name="연습용.Student"/>
+    <fullyQualifiedTypeName name="연습용.ch06.Korean"/>
+    <fullyQualifiedTypeName name="연습용.ch06.Student"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.ls.LSOutput"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

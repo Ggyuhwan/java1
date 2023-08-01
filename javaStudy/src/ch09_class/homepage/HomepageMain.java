@@ -67,7 +67,11 @@ public class HomepageMain {
 							boardDB.selectBoard(no);
 
 						} else if (select == 3) {
-							// 삭제 내일
+							System.out.println("삭제 글 번호를 입력해주세요");
+							System.out.print(">>> ");
+							int no = Integer.parseInt(scanner.nextLine());
+							boardDB.deleteBoard(no, login.getId());
+							
 						} else if (select == 4) {
 							// 로그아웃
 							break;

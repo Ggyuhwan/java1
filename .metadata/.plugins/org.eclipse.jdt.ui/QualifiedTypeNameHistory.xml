@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.w3c.dom.NameList"/>
-    <fullyQualifiedTypeName name="ch06_Method.method.sample"/>
-    <fullyQualifiedTypeName name="javax.print.attribute.standard.Copies"/>
-    <fullyQualifiedTypeName name="ch08_collection.PlayList"/>
-    <fullyQualifiedTypeName name="연습용.MyMath"/>
-    <fullyQualifiedTypeName name="java.lang.Double"/>
-    <fullyQualifiedTypeName name="java.security.KeyStore.Entry"/>
-    <fullyQualifiedTypeName name="java.util.Map.Entry"/>
-    <fullyQualifiedTypeName name="ch08_collection.CollectionMap"/>
-    <fullyQualifiedTypeName name="ch08_collection.CollectionList"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="javax.swing.text.Utilities"/>
     <fullyQualifiedTypeName name="ch09_class.commons.UtilClass"/>
@@ -45,7 +33,6 @@
     <fullyQualifiedTypeName name="ch10_extends_interface.simple.Parent"/>
     <fullyQualifiedTypeName name="ch10_extends_interface.simple.child"/>
     <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.Marine"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.HighTemplar"/>
     <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.StarUnit"/>
     <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.Zealot"/>
@@ -58,6 +45,19 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Locale"/>
+    <fullyQualifiedTypeName name="java.util.TimeZone"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.text.MessageFormat"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="org.w3c.dom.ls.LSOutput"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="practice.submit01.q09.Coffee"/>
+    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="boolean"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

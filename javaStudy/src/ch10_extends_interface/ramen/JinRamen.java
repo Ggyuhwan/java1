@@ -1,9 +1,9 @@
 package ch10_extends_interface.ramen;
 
 public class JinRamen extends Ramen {
-	
+
 	public JinRamen(String name, int price) {
-		super(name,price);
+		super(name, price);
 	}
 
 	@Override

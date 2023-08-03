@@ -74,7 +74,7 @@ public class PlayList {
 			// 영문 대소문자 상관없이, 포함되어 있다면 검색되도록
 			if (option.equals("제목")) {
 				if (temp[0].contains(keyword)) {
-					
+
 					result.add(arr.get(i));
 				}
 			} else if (option.equals("가수")) {

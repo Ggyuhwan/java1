@@ -38,56 +38,56 @@ public class PlayMap {
 				"사실말야내가말야그게그러니까말이야:케이시 (Kassy)", "Summer (Feat. BE’O (비오)):Paul Blanco", "Nxde:(여자)아이들",
 				"그중에 그대를 만나:김호중", "Monologue:테이", "다정히 내 이름을 부르면:전건호, 경서", "Thirsty:aespa",
 				"잘 지내자, 우리 (여름날 우리 X 로이킴):로이킴", "사랑의 바보:제이세라", "찬란한 하루:멜로망스", "KNOCK:이채연"));
-		
-			HashMap<String, ArrayList<String>> singerMap = new HashMap<>();
-			System.out.println(makeSongList("임영웅", playList));
-			singerMap.put("임영웅", makeSongList("임영웅", playList));
-			Set<String> keySet = singerMap.keySet();
-			for(String key:keySet) {
-				System.out.println(key + ":" + singerMap.get(key));
-			}
-			//전체 가수들의 노래 리스트를 만들려면?
-			// 1.가수목록생성 (유니크하게)
-			HashSet<String> singer = new HashSet<String>(); //HashSet 만들기
-			for(int i = 0 ; i< playList.size(); i++) {
-				String [] temp = playList.get(i).split(":");
-				singer.add(temp[1]);
-			}
-			System.out.println(singer.size()+":"+singer);
-			// 2.목록을 순회하며 makeSongList 메서드를 사용하여 map에 담기
-			for(String sing : singer) {
-				singerMap.put(sing, makeSongList(sing, playList));
-			}
+
+		HashMap<String, ArrayList<String>> singerMap = new HashMap<>();
+		System.out.println(makeSongList("임영웅", playList));
+		singerMap.put("임영웅", makeSongList("임영웅", playList));
+		Set<String> keySet = singerMap.keySet();
+		for (String key : keySet) {
+			System.out.println(key + ":" + singerMap.get(key));
+		}
+		// 전체 가수들의 노래 리스트를 만들려면?
+		// 1.가수목록생성 (유니크하게)
+		HashSet<String> singer = new HashSet<String>(); // HashSet 만들기
+		for (int i = 0; i < playList.size(); i++) {
+			String[] temp = playList.get(i).split(":");
+			singer.add(temp[1]);
+		}
+		System.out.println(singer.size() + ":" + singer);
+		// 2.목록을 순회하며 makeSongList 메서드를 사용하여 map에 담기
+		for (String sing : singer) {
+			singerMap.put(sing, makeSongList(sing, playList));
+		}
 //			System.out.println(singerMap);
-			//Set<String> keySet = singerMap.keySet();
-			for(String key:keySet) {
-				System.out.println(key + ":" + singerMap.get(key));
-			}
-			System.out.println("=======================");
-			// 1. 가수 리스트 출력 (가수 이름 정렬하여)
-			// 2. 가수 이름 입력받기 (q 누를때까지)
-			// 3. 입력받은 가수만 노래리스트를 출력(Map형태로 담아서)
-			ArrayList<String> sing1 = new ArrayList<String>();
-			for(String key:keySet) {
-				sing1.add(key);
-			}
-			Collections.sort(sing1);
-			System.out.println(sing1);
-			Scanner scanner = new Scanner(System.in);
-			
-			String sing2 = "정국";
-			
-			System.out.println(sing2);
-			
-			
+		// Set<String> keySet = singerMap.keySet();
+		for (String key : keySet) {
+			System.out.println(key + ":" + singerMap.get(key));
+		}
+		System.out.println("=======================");
+		// 1. 가수 리스트 출력 (가수 이름 정렬하여)
+		// 2. 가수 이름 입력받기 (q 누를때까지)
+		// 3. 입력받은 가수만 노래리스트를 출력(Map형태로 담아서)
+		ArrayList<String> sing1 = new ArrayList<String>();
+		for (String key : keySet) {
+			sing1.add(key);
+		}
+		Collections.sort(sing1);
+		System.out.println(sing1);
+		Scanner scanner = new Scanner(System.in);
+
+		String sing2 = "정국";
+
+		System.out.println(sing2);
+
 	}
+
 	// input 가수이름 , 전체 리스트
-	// output 가수 플레이리스트 
+	// output 가수 플레이리스트
 	public static ArrayList<String> makeSongList(String name, ArrayList<String> arr) {
 		ArrayList<String> result = new ArrayList<>();
-		for(int i = 0 ; i< arr.size(); i++) {
-			String [] temp = arr.get(i).split(":");
-			if(name.equals(temp[1])) {
+		for (int i = 0; i < arr.size(); i++) {
+			String[] temp = arr.get(i).split(":");
+			if (name.equals(temp[1])) {
 				result.add(temp[0]);
 			}
 		}

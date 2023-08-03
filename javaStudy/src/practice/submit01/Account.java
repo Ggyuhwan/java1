@@ -2,13 +2,15 @@ package practice.submit01;
 
 public class Account {
 	public static void main(String[] args) {
-		
+
 	}
+
 	public String name;
 	public String number;
 	public int value;
-	
-	public Account() {}
+
+	public Account() {
+	}
 
 	public Account(String name, String number, int value) {
 		super();
@@ -40,7 +42,5 @@ public class Account {
 	public void setValue(int value) {
 		this.value = value;
 	}
-	
 
 }
-

@@ -29,6 +29,7 @@ public class HomepageMain {
 				System.out.print(">>> ");
 				String name = scanner.nextLine();
 				Member mem = new Member(id, pw, name);
+				mem.id = "hi";
 				memDB.registMember(mem);
 			} else if (command == 2) {
 				System.out.println("아이디를 입력해주세요");
@@ -71,7 +72,7 @@ public class HomepageMain {
 							System.out.print(">>> ");
 							int no = Integer.parseInt(scanner.nextLine());
 							boardDB.deleteBoard(no, login.getId());
-							
+
 						} else if (select == 4) {
 							// 로그아웃
 							break;

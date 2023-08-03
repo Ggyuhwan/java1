@@ -7,10 +7,12 @@ package ch10_extends_interface.ramen;
 public abstract class Ramen {
 	String name;
 	int price;
+
 	public Ramen(String name, int price) {
 		this.name = name;
 		this.price = price;
 	}
+
 	public abstract void printRecipe(); // input, ouput, name 만 정의{}없음
-	
+
 }

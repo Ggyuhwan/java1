@@ -7,21 +7,23 @@ public class Student {
 	String color = "검정";
 	int maxSpeed = 350;
 	int speed;
-	
-	Student(){}
-	
-		Student(String model){
-			this.model = model;
-			}
-		Student(String model, String color){
-			this.model = model;
-			this.color = color;
-			}
-		Student(String model, String color, int maxSpeed){
-			this.model = model;
-			this.color = color;
-			this.maxSpeed = maxSpeed;
-		}
-	
-	
+
+	Student() {
+	}
+
+	Student(String model) {
+		this.model = model;
+	}
+
+	Student(String model, String color) {
+		this.model = model;
+		this.color = color;
+	}
+
+	Student(String model, String color, int maxSpeed) {
+		this.model = model;
+		this.color = color;
+		this.maxSpeed = maxSpeed;
+	}
+
 }

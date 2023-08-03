@@ -1,6 +1,6 @@
 package ch10_extends_interface.starcraft;
 
-public class Zealot extends StarUnit{
+public class Zealot extends StarUnit {
 	private int shileld;
 
 	public Zealot() {
@@ -10,11 +10,8 @@ public class Zealot extends StarUnit{
 	public Zealot(String name, int damage, int hp, int armor, int shield) {
 		super(name, damage, hp, armor);
 		this.shileld = shileld;
-		
-	}
-	
 
-	
+	}
 
 	@Override
 	public String toString() {
@@ -29,12 +26,5 @@ public class Zealot extends StarUnit{
 	public void setShileld(int shileld) {
 		this.shileld = shileld;
 	}
-	
-
-	
-	
-	
-	
-	
 
 }

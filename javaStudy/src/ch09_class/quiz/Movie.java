@@ -1,25 +1,24 @@
 package ch09_class.quiz;
+
 // VO (value object)
 public class Movie {
-	private String title; 	//영화제목
-	private String quotes; 	//명대사
-	private String actors; 	//배우
-	private String word; 	//초성
-	
+	private String title; // 영화제목
+	private String quotes; // 명대사
+	private String actors; // 배우
+	private String word; // 초성
+
 	public Movie(String title, String quotes, String actors, String word) {
-	
+
 		this.title = title;
 		this.quotes = quotes;
 		this.actors = actors;
 		this.word = word;
 	}
-	
 
 	@Override
 	public String toString() {
 		return "Movie [title=" + title + ", quotes=" + quotes + ", actors=" + actors + ", word=" + word + "]";
 	}
-
 
 	public String getTitle() {
 		return title;
@@ -52,9 +51,5 @@ public class Movie {
 	public void setWord(String word) {
 		this.word = word;
 	}
-	
-	
-		
-	
 
 }

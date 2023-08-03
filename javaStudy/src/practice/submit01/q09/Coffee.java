@@ -1,12 +1,11 @@
 package practice.submit01.q09;
 
 public class Coffee {
-	private String name ; 	//커피이름
-	private int price;		//커피가격
+	private String name; // 커피이름
+	private int price; // 커피가격
 
-	
 	public Coffee(String name, int price) {
-		
+
 		this.name = name;
 		this.price = price;
 	}
@@ -31,9 +30,5 @@ public class Coffee {
 	public String toString() {
 		return "Coffee [name=" + name + ", price=" + price + "]";
 	}
-	
-	
-	
-	
-	
+
 }

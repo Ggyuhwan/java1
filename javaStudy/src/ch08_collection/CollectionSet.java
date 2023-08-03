@@ -12,23 +12,23 @@ public class CollectionSet {
 		stuSet.add("팽수");
 		stuSet.add("팽순");
 		System.out.println(stuSet);
-		//중복된 값이 추가되지 않으며 에러는 안남.
+		// 중복된 값이 추가되지 않으며 에러는 안남.
 		stuSet.add("팽수");
 		// .size
-		System.out.println(stuSet.size()); //2
+		System.out.println(stuSet.size()); // 2
 		// .contains(값) true, false
-		System.out.println(stuSet.contains("팽수")); //true
+		System.out.println(stuSet.contains("팽수")); // true
 		// set은 순서정보가 없음
-		for(String stu : stuSet) {
+		for (String stu : stuSet) {
 			System.out.println(stu);
 		}
 		// Iterator 사용
 		Iterator<String> itertor = stuSet.iterator();
-		while(itertor.hasNext()) {
+		while (itertor.hasNext()) {
 			String name = itertor.next();
 			System.out.println(name);
 		}
-		
+
 	}
 
 }

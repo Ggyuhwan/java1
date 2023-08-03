@@ -30,22 +30,21 @@ public class FutureMain {
 		stuList.add(new FutureStudent("조하은", "Jo HaEun"));
 		stuList.add(new FutureStudent("최민혁", "Choi MinHyeock"));
 		stuList.add(new FutureStudent("최성웅", "Choi SungWoong"));
-		
-		for(int i = 0; i <11; i++) {
-			System.out.println((i + 1)+"일차=====================");
-			for(FutureStudent stu: stuList) {
+
+		for (int i = 0; i < 11; i++) {
+			System.out.println((i + 1) + "일차=====================");
+			for (FutureStudent stu : stuList) {
 				stu.endDay();
 			}
 			try {
-		Thread.sleep(1000);
-		}catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
 			}
-		Collections.sort(stuList, (stuA, stuB) ->
-							stuB.getLevel()-stuA.getLevel());
-		for(int i = 0 ; i <stuList.size(); i++) {
-			System.out.println((i+1)+"등"+stuList.get(i));
+		}
+		Collections.sort(stuList, (stuA, stuB) -> stuB.getLevel() - stuA.getLevel());
+		for (int i = 0; i < stuList.size(); i++) {
+			System.out.println((i + 1) + "등" + stuList.get(i));
 		}
 		System.out.println(FutureStudent.getCnt());
 	}

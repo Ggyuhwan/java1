@@ -20,56 +20,52 @@ public class q04 {
 		int a = 360;
 		int i = 1;
 		int d = 5834;
-		System.out.println(d/a);
-		System.out.println(d%a);
-		int k = d%a;
-		if (k<60) {
+		System.out.println(d / a);
+		System.out.println(d % a);
+		int k = d % a;
+		if (k < 60) {
 			System.out.println("사탕");
-		}else if (60<=k && k < 120) {
+		} else if (60 <= k && k < 120) {
 			System.out.println("초콜릿");
-		}else if (120<= k && k < 180) {
+		} else if (120 <= k && k < 180) {
 			System.out.println("쿠키");
-		}else if (180<= k && k < 240) {
+		} else if (180 <= k && k < 240) {
 			System.out.println("콜라");
-		}else if (240<= k && k < 300) {
+		} else if (240 <= k && k < 300) {
 			System.out.println("아이스크림");
-		}else
+		} else
 			System.out.println("커피");
-		
+
 //		for(i = 1; i <= 17; i++) {
 //			int a1 =a*i;
 //			System.out.println(a1);
 //			int c= a1-5834;
 //			System.out.println(c);
 //		}
-	
-		
-		while(true) {
-			int c = a*i;
-			System.out.println(i+"바퀴"+c);
+
+		while (true) {
+			int c = a * i;
+			System.out.println(i + "바퀴" + c);
 			i++;
-			
+
 			if (5760 <= c) {
-				System.out.println("바퀴수 :" + (i-1));
+				System.out.println("바퀴수 :" + (i - 1));
 				System.out.println();
-				
+
 				break;
 			}
-	}
-		
+		}
+
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("거꾸로 할 단어를 입력해주세요:");
 		String input = scanner.nextLine();
 		String bb = input;
 		String aa = "";
-		for(int j = bb.length()-1; j >=0; j--) {
-			aa = aa+bb.charAt(j);
+		for (int j = bb.length() - 1; j >= 0; j--) {
+			aa = aa + bb.charAt(j);
 		}
 		System.out.println(aa);
-		
-		
-		
-		
+
 	}
 
 }

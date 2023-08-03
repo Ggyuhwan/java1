@@ -68,8 +68,8 @@ public class ApiMath {
 
 		HashMap<String, String> resultMap = randomCoffee(classMateList);
 		Set<String> keySet = resultMap.keySet();
-		for(String key: keySet) {
-			System.out.print(key+":");
+		for (String key : keySet) {
+			System.out.print(key + ":");
 			System.out.println(resultMap.get(key));
 		}
 
@@ -79,7 +79,7 @@ public class ApiMath {
 		// input : ArrayList<String> 타입
 		// output : HashMap<String,String> key : 학생이름, value : 당첨/꽝
 		HashMap<String, String> resultMap = new HashMap<String, String>();
-		for(int i = 0; i <arr.size(); i++) {
+		for (int i = 0; i < arr.size(); i++) {
 			resultMap.put(arr.get(i), randomCard());
 		}
 		// 1. input으로 받은 arr의 건수 만큼 for문
@@ -108,6 +108,7 @@ public class ApiMath {
 		}
 		return result;
 	}
+
 	public static String randomclass() {
 		Random random = new Random();
 		String result;

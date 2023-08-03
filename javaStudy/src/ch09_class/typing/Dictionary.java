@@ -3,18 +3,18 @@ package ch09_class.typing;
 import java.util.ArrayList;
 
 public class Dictionary {
-	//전역적으로 사용하는 상수
+	// 전역적으로 사용하는 상수
 	public static final int OPTION_STUDENT_NAME = 0;
 	public static final int OPTION_CODING_WORD = 1;
 	public static final int OPTION_RANDOM_ALPHABET = 2;
-	
+
 	public static ArrayList<String> makeArrayList(int option) {
 		ArrayList<String> wordList = new ArrayList<String>();
-		//option 0: 학생목록, 1:코딩용어, 2:랜덤알파벳
-		if(option == OPTION_STUDENT_NAME) {
-			//ctrl + shift + y
-			//ctrl + shift + x
-			
+		// option 0: 학생목록, 1:코딩용어, 2:랜덤알파벳
+		if (option == OPTION_STUDENT_NAME) {
+			// ctrl + shift + y
+			// ctrl + shift + x
+
 			wordList.add("kim gyuyeong");
 			wordList.add("kim donghyun");
 			wordList.add("kim sangjun");
@@ -38,10 +38,8 @@ public class Dictionary {
 			wordList.add("jo haeun");
 			wordList.add("choi minhyeock");
 			wordList.add("choi sungwoong");
-						
-			
-			
-		}else if (option == OPTION_CODING_WORD) {
+
+		} else if (option == OPTION_CODING_WORD) {
 			wordList.add("Class");
 			wordList.add("static");
 			wordList.add("while");
@@ -49,20 +47,20 @@ public class Dictionary {
 			wordList.add("method");
 			wordList.add("public");
 			wordList.add("Constructor");
-			
-		}else if (option == OPTION_RANDOM_ALPHABET) {
+
+		} else if (option == OPTION_RANDOM_ALPHABET) {
 			// 랜덤 알파벳 6자리
 			String[] alphabet = "qwertyuiopasdfghjklzxcvbnm".split("");
-			//10개만 담기
-			for(int i =0; i <10;i++) {
+			// 10개만 담기
+			for (int i = 0; i < 10; i++) {
 				String word = "";
-				for(int j =0 ; j < 6; j++) {
-					int randIdx = (int) (Math.random()*alphabet.length);
+				for (int j = 0; j < 6; j++) {
+					int randIdx = (int) (Math.random() * alphabet.length);
 					word += alphabet[randIdx];
 				}
 				wordList.add(word);
 			}
-	}
+		}
 		return wordList;
 	}
 }

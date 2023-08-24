@@ -1,3 +1,0 @@
-thisisjava/
-javaStudy/bin/
-

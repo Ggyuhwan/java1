@@ -12,6 +12,13 @@ public class ConnectionFactory {
 	private String id;
 	private String pw;
 	private int maxConn;
+	public int getMaxConn() {
+		return maxConn;
+	}
+	public void setMaxConn(int maxConn) {
+		this.maxConn = maxConn;
+	}
+
 	private static ConnectionFactory instance = new ConnectionFactory();
 	public static ConnectionFactory getInstance() {
 		return instance;

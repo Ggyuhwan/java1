@@ -13,20 +13,21 @@ import ch14_jdbc_conn.model.UserVO;
 public class UserService {
 	
 	private ConnectionPool cp = ConnectionPool.getInstance();
+	
 	private UserDao dao = UserDao.getInstance();
 	private static UserService instance = new UserService();
 	public static UserService getInstance() {
 		return instance;
-	} 
-	// 로그인
+	}
+	// 로그인 
 	public UserVO loginUser(String id) {
 		Connection conn = cp.getConnection();
 		try {
 			return dao.loginUser(conn, id);
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}finally {
-			if(conn != null)cp.releaseConnection(conn);
+		} finally {
+			if(conn != null )cp.releaseConnection(conn);
 		}
 		return new UserVO();
 	}
@@ -42,14 +43,15 @@ public class UserService {
 		}
 		return 0;
 	}
-	//게시글 조회
+	
+	// 전체 게시글 목록 조회 
 	public ArrayList<BbsVO> bbsList(){
-			Connection conn = cp.getConnection();
-			try {
-				return dao.bbsList(conn);
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-			return null;
+		Connection conn = cp.getConnection();
+		try {
+			return  dao.bbsList(conn);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 }

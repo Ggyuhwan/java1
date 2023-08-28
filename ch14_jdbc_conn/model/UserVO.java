@@ -1,24 +1,23 @@
 package ch14_jdbc_conn.model;
-// value obejct
+
+// value object 
 public class UserVO {
+	
 	private String userId;
 	private String userPw;
 	private String userNm;
 	private String userMail;
 	private int userMileage;
-	private String create_dt;
-	private String update_Dt;
+	private String createDt;
+	private String updateDt;
 	private String useYn;
 	
-// 생성자
-	public UserVO(String userId, String userPw, String userNm) { 
-		super();
+	public UserVO(String userId, String userPw, String userNm) {
 		this.userId = userId;
 		this.userPw = userPw;
 		this.userNm = userNm;
 	}
 	public UserVO() {
-		
 	}
 	public String getUserId() {
 		return userId;
@@ -50,17 +49,17 @@ public class UserVO {
 	public void setUserMileage(int userMileage) {
 		this.userMileage = userMileage;
 	}
-	public String getCreatr_dt() {
-		return create_dt;
+	public String getCreateDt() {
+		return createDt;
 	}
-	public void setCreatr_dt(String creatr_dt) {
-		this.create_dt = creatr_dt;
+	public void setCreateDt(String createDt) {
+		this.createDt = createDt;
 	}
-	public String getUpdate_Dt() {
-		return update_Dt;
+	public String getUpdateDt() {
+		return updateDt;
 	}
-	public void setUpdate_Dt(String update_Dt) {
-		this.update_Dt = update_Dt;
+	public void setUpdateDt(String updateDt) {
+		this.updateDt = updateDt;
 	}
 	public String getUseYn() {
 		return useYn;
@@ -71,9 +70,8 @@ public class UserVO {
 	@Override
 	public String toString() {
 		return "UserVO [userId=" + userId + ", userPw=" + userPw + ", userNm=" + userNm + ", userMail=" + userMail
-				+ ", userMileage=" + userMileage + ", create_dt=" + create_dt + ", update_Dt=" + update_Dt + ", useYn="
+				+ ", userMileage=" + userMileage + ", createDt=" + createDt + ", updateDt=" + updateDt + ", useYn="
 				+ useYn + "]";
 	}
-	
 	
 }

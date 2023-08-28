@@ -1,72 +1,56 @@
 package ch14_jdbc_conn.model;
 
 public class BbsVO {
-	private int  bbs_No;
-	private String bbs_Title;
-	private String  author_Id;
-	private String	update_Dt;
-	
-	
-	// 생성자	
-	public BbsVO(int bbs_No, String bbs_Title, String author_Id, String update_Dt) {
-		super();
-		this.bbs_No = bbs_No;
-		this.bbs_Title = bbs_Title;
-		this.author_Id = author_Id;
-		this.update_Dt = update_Dt;
+	 private int rnum;     
+     private int allCnt;     
+     private int bbsNo;     
+     private String bbsTitle;   
+     private String authorId;   
+     private String updateDt;
+     
+    public int getBbsNo() {
+		return bbsNo;
 	}
+	public void setBbsNo(int bbsNo) {
+		this.bbsNo = bbsNo;
+	}
+     
 	public BbsVO() {
-		
 	}
-	
-
-	public int getBbs_No() {
-		return bbs_No;
+	public int getRnum() {
+		return rnum;
 	}
-
-
-	public void setBbs_No(int bbs_No) {
-		this.bbs_No = bbs_No;
+	public void setRnum(int rnum) {
+		this.rnum = rnum;
 	}
-
-
-	public String getBbs_Title() {
-		return bbs_Title;
+	public int getAllCnt() {
+		return allCnt;
 	}
-
-
-	public void setBbs_Title(String bbs_Title) {
-		this.bbs_Title = bbs_Title;
+	public void setAllCnt(int allCnt) {
+		this.allCnt = allCnt;
 	}
-
-
-	public String getAuthor_Id() {
-		return author_Id;
+	public String getBbsTitle() {
+		return bbsTitle;
 	}
-
-
-	public void setAuthor_Id(String author_Id) {
-		this.author_Id = author_Id;
+	public void setBbsTitle(String bbsTitle) {
+		this.bbsTitle = bbsTitle;
 	}
-
-
-	public String getUpdate_Dt() {
-		return update_Dt;
+	public String getAuthorId() {
+		return authorId;
 	}
-
-
-	public void setUpdate_Dt(String update_Dt) {
-		this.update_Dt = update_Dt;
+	public void setAuthorId(String authorId) {
+		this.authorId = authorId;
 	}
-
-	
+	public String getUpdateDt() {
+		return updateDt;
+	}
+	public void setUpdateDt(String updateDt) {
+		this.updateDt = updateDt;
+	}
 	@Override
 	public String toString() {
-		return "BbsVO [bbs_No=" + bbs_No + ", bbs_Title=" + bbs_Title + ", author_Id=" + author_Id + ", update_Dt="
-				+ update_Dt + "]";
+		return "BbsVO [rnum=" + rnum + ", allCnt=" + allCnt + ", bbsNo=" + bbsNo + ", bbsTitle=" + bbsTitle
+				+ ", authorId=" + authorId + ", updateDt=" + updateDt + "]";
 	}
-	
-	
-	
-	
+     
 }

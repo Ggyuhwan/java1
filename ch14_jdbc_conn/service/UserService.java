@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import ch14_jdbc_conn.Dao.UserDao;
 import ch14_jdbc_conn.jdbc.ConnectionPool;
 import ch14_jdbc_conn.model.BbsVO;
+import ch14_jdbc_conn.model.CheckVO;
 import ch14_jdbc_conn.model.UserVO;
 
 // DAO 사용하는 비즈니스 로직
@@ -49,6 +50,16 @@ public class UserService {
 		Connection conn = cp.getConnection();
 		try {
 			return  dao.bbsList(conn);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	// 게시글 상세 조회
+	public ArrayList<CheckVO> cheackList(){
+		Connection conn = cp.getConnection();
+		try {
+			return  dao.cheackList(conn);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

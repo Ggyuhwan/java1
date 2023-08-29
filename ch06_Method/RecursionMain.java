@@ -4,11 +4,11 @@ public class RecursionMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Func(5);
+		Func(3);
 
-		long no = factorial(5);
+		long no = factorial(4);
 		System.out.println(no);
-		no = recFactorial(5);
+		no = recFactorial(6);
 		System.out.println(no);
 
 	}

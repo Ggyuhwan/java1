@@ -13,6 +13,9 @@ public class CheckVO {
 		this.bbs_Content = bbs_Content;
 		this.author_Id = author_Id;	
 	}
+	public CheckVO() {
+		
+	}
 
 	public int getBbs_No() {
 		return bbs_No;

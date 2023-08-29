@@ -9,10 +9,10 @@ public class CollectionList {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		/*
-		 * 컬렉션 프레임워크는 데이터를 보다 쉽게 다룰 수 있도록 재사용 가능한 컬렉션 클래스를 제공함 List, Set, Map 1.List
-		 * :순서대로 객체를 저장하는 구조, 중복된 원소를 허용 원소에 접근하기 위해 인덱스를 사용 대표적인 ArrayList, LinkedList
-		 * 2.Set :중복을 허용하지 않는 객체의 모음 원소의 순서는 보장되지않음 대표 :HashSet, TreeSet 3.Map :키와 값의
-		 * 쌍으로 이루어진 객체를 저장하는 구조 키는 중복될 수 없으며 각 키는 하나의 값을 가리킴. 대표 :HashMap, TreeMap
+		 * 컬렉션 프레임워크는 데이터를 보다 쉽게 다룰 수 있도록 재사용 가능한 컬렉션 클래스를 제공함 List, Set, Map 
+		 * 1.List :순서대로 객체를 저장하는 구조, 중복된 원소를 허용 원소에 접근하기 위해 인덱스를 사용 대표적인 ArrayList, LinkedList
+		 * 2.Set :중복을 허용하지 않는 객체의 모음 원소의 순서는 보장되지않음 대표 :HashSet, TreeSet 
+		 * 3.Map :키와 값의 쌍으로 이루어진 객체를 저장하는 구조 키는 중복될 수 없으며 각 키는 하나의 값을 가리킴. 대표 :HashMap, TreeMap
 		 */
 		// ArrayList(동적 배열형태)
 		ArrayList<String> students = new ArrayList<String>();

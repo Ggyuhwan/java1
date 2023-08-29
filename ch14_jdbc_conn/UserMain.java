@@ -44,6 +44,8 @@ public class UserMain {
 					 command = Integer.parseInt(sc.nextLine());
 					 if(command == 1) {
 						 System.out.println("상세 내용을 보고싶은 번호 순서를 입력하세요");
+						 System.out.print(">>>");
+						 String id = sc.nextLine();
 						 // 1 입력시 게시글1 의 상세내용과 댓글을 출력하세요
 						 // (1) 상세내용을 담을 VO 생성 or 기존 VO 컬럼추가
 						 // (2) 상세내용 query작성

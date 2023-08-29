@@ -88,10 +88,26 @@ public class UserDao {
 		}
 		return bbsList;
 	}
-	public ArrayList<CheckVO> cheackList (Connection conn){
+	public ArrayList<CheckVO> cheackList (Connection conn) throws SQLException{
 		ArrayList<CheckVO> cheackList = new ArrayList<CheckVO>();
 		StringBuffer query  = new StringBuffer();
-		query.append("");
+		query.append(" select BBS_NO");
+		query.append("        ,BBS_TITLE");
+		query.append("        ,BBS_CONTENT");
+		query.append("        ,AUTHOR_ID");
+		query.append(" from bbs");
+		PreparedStatement ps =
+				conn.prepareStatement(query.toString());
+		ResultSet rs = ps.executeQuery();
+		while(rs.next()) {
+			CheckVO temp = new CheckVO();
+			temp.setBbs_No(rs.getInt("bbs_no"));
+			temp.setBbs_Title(rs.getString("bbs_title"));
+			temp.setBbs_Title(rs.getString("bbs_content"));
+			temp.setBbs_Title(rs.getString("author_id"));
+			cheackList.add(temp);
+		}
+		return cheackList;
 	}
 
 }

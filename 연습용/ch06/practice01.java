@@ -25,7 +25,8 @@ public class practice01 {
 			sb.append(chars1[i]).append(chars2[i]);
 		}System.out.println(sb+ " 3번풀이");
 		
-		
+		String a = "car";
+		System.out.println(a.substring(1,2));
 	
 		    }
 

@@ -1,20 +1,34 @@
 package 연습용.sol_algorithm;
 
+import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class programmers {
 	public static void main(String[] args) {
-	 System.out.println(solution("기억니은", "가나다라"));
+	
+	String[] abc = new String[3];
+	System.out.println(abc.length);
+	
+	abc[0] = "a";
+	abc[1] = "b";
+	abc[2] = "c";
+	String answer = "";
+	for (int i =0; i < abc.length; i++) {
+		answer += abc[i];
+	}
+	System.out.println(answer+"1");
+	System.out.println(String.join("", abc)+"2");
+	StringBuilder sb = new StringBuilder();
+	for(String a : abc) {
+		sb.append(a);
+		System.out.println(a);
+	}
+	System.out.println(sb+"3");
 }
 
-
-	 public static String solution(String str1, String str2) {
-	        String answer = "";
-	        for(int i=0; i<str1.length(); i++) {
-	        	answer+= str1.substring(i,i+1);
-	        	answer+= str2.substring(i,i+1);
-	        }
-	        return answer;
-}
+ 
+	
 	 
 }

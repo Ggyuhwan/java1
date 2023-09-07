@@ -8,6 +8,7 @@ import java.util.List;
 public class programmers {
 	public static void main(String[] args) {
 	
+		
 	String[] abc = new String[3];
 	System.out.println(abc.length);
 	
@@ -26,6 +27,12 @@ public class programmers {
 		System.out.println(a);
 	}
 	System.out.println(sb+"3");
+	
+	
+	int a = 123; int b =456;
+	String c = Integer.toString(a);
+	System.out.println(c);
+	
 }
 
  

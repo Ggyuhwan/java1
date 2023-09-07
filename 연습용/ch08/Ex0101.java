@@ -29,6 +29,13 @@ public class Ex0101 {
 	        int count3 = getCount();
 	        int count4 = getCount();
 	        System.out.println(count);
+	        
+	        double avg = getAverage(new int[] {100,80,80,100});
+	        System.out.println( avg);
+	        int[] numbers = {3,5,9,2,8,1,4};
+	        int maxOfNumbers = getMaxAndMin(numbers)[0];
+	        int minOfNumbers = getMaxAndMin(numbers)[1];
+	        System.out.println(minOfNumbers);
         
 	}
 
@@ -46,5 +53,23 @@ public class Ex0101 {
     static int getCount () {
         System.out.println("카운트 증가");
         return ++count;
+    }
+    // 평균 구하는 메소드
+    static double getAverage (int[] nums) {
+    	
+    	double sum = 0;
+    	for(int num : nums) {
+    		sum += num;
+    	}return sum / nums.length;
+    }
+    // 자바의 메소드는 하나의 값만 반환 가능
+    // 여러 값을 반환하려면 배열 또는 이후 배울 객체를 활용
+    static int[] getMaxAndMin (int[] nums) {
+    	int max = nums[0];
+    	int min = nums[0];
+    	for (int num:nums) {
+    		max = max > num ? max:num;
+    		min = min < num ? min:num;
+    	}return new int [] {max,min};
     }
 }
